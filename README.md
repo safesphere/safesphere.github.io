@@ -14,18 +14,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Build / Release
 
-To create a production build, run:
+* To create a **production build (static + dynamic)**, run:
 
-```bash
-npm run build
-# or
-yarn build
-```
+  ```bash
+  npm run build
+  # or
+  yarn build
+  ```
+  
+  The output will be placed in the **`/.next`** folder. Run **`npm run start /* or */ yarn start`** to start the production server.
 
-Export as fully static, run:
+* To export a **fully static** html, run:
 
-```bash
-npm run export
-# or
-yarn export
-```
+  ```bash
+  npm run export
+  # or
+  yarn export
+  ```
+  
+  The output will be placed in the **`/out`** folder.
