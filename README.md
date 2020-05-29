@@ -22,7 +22,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   yarn build
   ```
   
-  The output will be placed in the **`/.next`** folder. Run **`npm run start /* or */ yarn start`** to start the production server.
+  The output will be placed in the **`/.next`** folder.  
+  Run **`npm run start`** or **`yarn start`** to start the production server.
 
 * To export a **fully static** html, run:
 
