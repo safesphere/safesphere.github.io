@@ -1,4 +1,6 @@
 import { AppProps } from "next/app";
+
+import Navigation from "./components/navigation";
 import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
@@ -7,28 +9,8 @@ export default function Home(props: AppProps) {
   return (
     <div className="container">
       <img src="/assets/safesphere-logo.svg" />
-      <nav role="navigation">
-        <ul>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#how-it-works">How it works</a>
-          </li>
-          <li>
-            <a href="#use-cases">Use cases</a>
-          </li>
-          <li>
-            <a href="#user-privacy">User privacy</a>
-          </li>
-          <li>
-            <a href="#founding-team">Founding Team</a>
-          </li>
-          <li>
-            <a href="#contact-us">Contact us</a>
-          </li>
-        </ul>
-      </nav>
+      <Navigation />
+
       <main>
         <section className={styles.section}>
           <h2 className="subheading">
