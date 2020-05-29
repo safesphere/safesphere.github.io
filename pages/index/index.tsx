@@ -1,5 +1,4 @@
 import { AppProps } from "next/app";
-// import { H2 } from "../components";
 import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
