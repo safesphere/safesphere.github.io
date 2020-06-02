@@ -20,15 +20,17 @@
   padding: 0 5vw;
   padding-top: 200px;
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0;
   }
 }
 
 .columns {
   grid-template-columns: 1fr;
   display: grid;
+  gap: 50px;
 
   @include breakpoint(md) {
     gap: 3vw;
@@ -59,4 +61,43 @@
   display: flex;
   justify-content: space-between;
   color: var(--color-muted);
+}
+
+.useCases {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+
+  li {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  img {
+    margin-right: 1em;
+  }
+}
+
+.arrowLink {
+  text-align: center;
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    background-image: url("/assets/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: inline-block;
+    padding-bottom: 40px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-position: 60% bottom;
+    }
+  }
 }

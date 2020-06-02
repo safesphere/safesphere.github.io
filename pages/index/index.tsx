@@ -73,7 +73,11 @@ export default function Home(props: AppProps) {
               </strong>
             </p>
           </div>
-          <div>illustration</div>
+          <img
+            src="/assets/illustration-about.svg"
+            alt=""
+            style={{ width: "100%", alignSelf: "center" }}
+          />
         </section>
 
         {/**
@@ -83,7 +87,11 @@ export default function Home(props: AppProps) {
           id="how-it-works"
           className={`${styles.section} ${styles.columns}`}
         >
-          <div>illustration</div>
+          <img
+            src="/assets/illustration-solution.svg"
+            alt=""
+            style={{ width: "100%", alignSelf: "center" }}
+          />
           <div>
             <header>
               <h2 className="h2">How it works</h2>
@@ -91,7 +99,7 @@ export default function Home(props: AppProps) {
               <p className="subheading">A sound solution</p>
             </header>
             <br />
-            <ul>
+            <ul className="bullet">
               <li>
                 Using precise acoustic signals, SafeSphere’s patent-pending
                 proprietary algorithms determine how close users are to each
@@ -143,18 +151,40 @@ export default function Home(props: AppProps) {
               movement flows during daily activities.
             </p>
           </div>
-          <div>
-            <ul>
-              <li>Supermarkets and retail spaces</li>
-              <li>Sports arenas and Gyms</li>
-              <li>Universities</li>
-              <li>Restaurants</li>
-              <li>Office buildings and factories</li>
-              <li>Healthcare institutions</li>
-              <li>Airports and train stations</li>
-              <li>Public parks</li>
-            </ul>
-          </div>
+          <ul className={styles.useCases}>
+            <li>
+              <img src="/assets/icon-supermarkets.svg" alt="" />
+              Supermarkets and retail spaces
+            </li>
+            <li>
+              <img src="/assets/icon-sports.svg" alt="" />
+              Sports arenas and Gyms
+            </li>
+            <li>
+              <img src="/assets/icon-universities.svg" alt="" />
+              Universities
+            </li>
+            <li>
+              <img src="/assets/icon-restaurants.svg" alt="" />
+              Restaurants
+            </li>
+            <li>
+              <img src="/assets/icon-office.svg" alt="" />
+              Office buildings and factories
+            </li>
+            <li>
+              <img src="/assets/icon-hospitals.svg" alt="" />
+              Healthcare institutions
+            </li>
+            <li>
+              <img src="/assets/icon-airports.svg" alt="" />
+              Airports and train stations
+            </li>
+            <li>
+              <img src="/assets/icon-parks.svg" alt="" />
+              Public parks
+            </li>
+          </ul>
         </section>
 
         {/**
@@ -164,8 +194,12 @@ export default function Home(props: AppProps) {
           id="user-privacy"
           className={`${styles.section} ${styles.columns}`}
         >
-          <div>illustration</div>
-          <div>
+          <img
+            src="/assets/illustration-security.svg"
+            alt=""
+            style={{ width: "400px", alignSelf: "center" }}
+          />
+          <div style={{ alignSelf: "center" }}>
             <header>
               <h2 className="h2">User Privacy</h2>
               <br />
@@ -276,6 +310,12 @@ export default function Home(props: AppProps) {
               </li>
             </ul>
           </section>
+
+          <div className={styles.arrowLink}>
+            <a href="./">
+              <strong>See our Full Board of Advisors</strong>
+            </a>
+          </div>
         </section>
 
         {/**
