@@ -1,3 +1,11 @@
+@import "pages/mixins";
+
 .section {
   min-height: 100vh;
+  padding: 0 5vw;
+
+  @include breakpoint(md) {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }
