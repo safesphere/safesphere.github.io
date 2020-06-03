@@ -401,10 +401,10 @@ export default function Home(props: AppProps) {
       </main>
 
       <footer className={styles.pageFooter}>
-        <span>
+        <div>
           Designed and developed by <strong>[e-spres-oh]</strong>
-        </span>
-        <span>&copy;Safe Sphere, 2020</span>
+        </div>
+        <div>&copy;Safe Sphere, 2020</div>
       </footer>
     </div>
   );

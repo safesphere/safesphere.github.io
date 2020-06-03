@@ -121,11 +121,30 @@
 }
 
 .pageFooter {
-  padding: 50px;
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between;
   color: var(--color-muted);
+  font-size: 12px;
+  padding: 100px 20px 50px 20px;
+  text-align: center;
+
+  @include breakpoint(sm) {
+    display: flex;
+    justify-content: space-between;
+    text-align: initial;
+  }
+  @include breakpoint(md) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 1em;
+
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+      display: inline;
+    }
+  }
 }
 
 .useCases {
