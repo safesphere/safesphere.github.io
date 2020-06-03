@@ -5,10 +5,11 @@ type Props = {
   label: string;
   active: boolean;
   onClick(): void;
+  color?: string;
 };
 
 function Hamburger(props: Props) {
-  const { active, label, onClick } = props;
+  const { active, label, onClick, color } = props;
 
   return (
     <div
@@ -17,7 +18,7 @@ function Hamburger(props: Props) {
       onClick={() => onClick()}
       data-active={active}
     >
-      <span className={styles.hamburgerBox}>
+      <span className={styles.hamburgerBox} style={{ "--color": color }}>
         <span className={styles.hamburgerInner} />
       </span>
     </div>

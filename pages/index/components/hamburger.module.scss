@@ -1,25 +1,14 @@
 @import "pages/mixins";
 
-$hamburger-padding-x: 0px !default;
-$hamburger-padding-y: 0px !default;
 $hamburger-layer-width: 32px !default;
 $hamburger-layer-height: 2px !default;
 $hamburger-layer-spacing: 6px !default;
-$hamburger-layer-color: #7a85f5 !default;
-$hamburger-layer-border-radius: 2px !default;
-$hamburger-hover-opacity: 0.7 !default;
-$hamburger-active-layer-color: $hamburger-layer-color !default;
-$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
-// To use CSS filters as the hover effect instead of opacity,
-// set $hamburger-hover-use-filter as true and
-// change the value of $hamburger-hover-filter accordingly.
-$hamburger-hover-use-filter: false !default;
-$hamburger-hover-filter: opacity(50%) !default;
-$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+$hamburger-layer-border-radius: 2px !default;
 
 .hamburger {
-  padding: $hamburger-padding-y $hamburger-padding-x;
+  --color: #7a85f5;
+
   display: inline-block;
   cursor: pointer;
 
@@ -37,33 +26,25 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
   overflow: visible;
 
   &:hover {
-    @if $hamburger-hover-use-filter == true {
-      filter: $hamburger-hover-filter;
-    } @else {
-      opacity: $hamburger-hover-opacity;
-    }
+    opacity: 0.8;
   }
 
   &[data-active="true"] {
     &:hover {
-      @if $hamburger-hover-use-filter == true {
-        filter: $hamburger-active-hover-filter;
-      } @else {
-        opacity: $hamburger-active-hover-opacity;
-      }
+      opacity: 0.8;
     }
 
     .hamburgerInner,
     .hamburgerInner::before,
     .hamburgerInner::after {
-      background-color: $hamburger-active-layer-color;
+      background-color: var(--color);
     }
   }
 }
 
 .hamburgerBox {
   width: $hamburger-layer-width;
-  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  height: $hamburger-layer-width;
   display: inline-block;
   position: relative;
 }
@@ -78,7 +59,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
   &::after {
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
-    background-color: $hamburger-layer-color;
+    background-color: var(--color);
     border-radius: $hamburger-layer-border-radius;
     position: absolute;
     transition-property: transform;
@@ -102,10 +83,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 }
 
 .hamburger {
-  @include breakpoint(md) {
-    display: none;
-  }
-
   .hamburgerInner {
     transition-duration: 0.075s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
