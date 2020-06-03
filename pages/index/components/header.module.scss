@@ -1,0 +1,63 @@
+@import "pages/mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-image: linear-gradient(
+    var(--color-bg) 0%,
+    var(--color-bg) 85%,
+    rgba(243, 243, 243, 0) 100%
+  );
+  padding: 20px;
+
+  display: grid;
+  grid-template:
+    "logo toggle"
+    "nav nav";
+
+  &[data-menu-show="true"] {
+    background: white;
+  }
+
+  @include breakpoint(md) {
+    padding: 50px;
+
+    grid-template: "logo toggle nav";
+  }
+}
+
+.logo {
+  grid-area: logo;
+
+  img {
+    width: 120px;
+    display: block;
+
+    @include breakpoint(md) {
+      width: auto;
+    }
+  }
+}
+
+.toggle {
+  grid-area: toggle;
+  align-self: center;
+  justify-self: flex-end;
+  line-height: 0;
+}
+
+.nav {
+  grid-area: nav;
+  display: none;
+  align-self: center;
+
+  [data-menu-show="true"] & {
+    display: block;
+  }
+
+  @include breakpoint(md) {
+    display: block;
+  }
+}

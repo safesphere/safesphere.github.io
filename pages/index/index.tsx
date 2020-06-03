@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 
-import Navigation from "./components/navigation";
+import Header from "./components/header";
 import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
@@ -8,12 +8,7 @@ export default function Home(props: AppProps) {
 
   return (
     <div className="container">
-      <div className={styles.pageHeader}>
-        <a href="./">
-          <img src="/assets/safesphere-logo.svg" alt="SafeSphere logo" />
-        </a>
-        <Navigation />
-      </div>
+      <Header />
 
       <main>
         {/**

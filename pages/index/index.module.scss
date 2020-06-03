@@ -1,21 +1,5 @@
 @import "pages/mixins";
 
-.pageHeader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: linear-gradient(
-    var(--color-bg) 0%,
-    var(--color-bg) 70%,
-    rgba(243, 243, 243, 0) 100%
-  );
-  padding: 50px;
-}
-
 .section {
   padding: 0 5vw;
   padding-top: 200px;

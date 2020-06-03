@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import styles from "./navigation.module.scss";
 
 function Navigation() {
@@ -10,28 +10,26 @@ function Navigation() {
   }, []);
 
   return (
-    <nav className={styles.navigation} role="navigation">
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#how-it-works">How it works</a>
-        </li>
-        <li>
-          <a href="#use-cases">Use cases</a>
-        </li>
-        <li>
-          <a href="#user-privacy">User privacy</a>
-        </li>
-        <li>
-          <a href="#founding-team">Founding Team</a>
-        </li>
-        <li>
-          <a href="#contact-us">Contact us</a>
-        </li>
-      </ul>
-    </nav>
+    <ul className={styles.menu}>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#how-it-works">How it works</a>
+      </li>
+      <li>
+        <a href="#use-cases">Use cases</a>
+      </li>
+      <li>
+        <a href="#user-privacy">User privacy</a>
+      </li>
+      <li>
+        <a href="#founding-team">Founding Team</a>
+      </li>
+      <li>
+        <a href="#contact-us">Contact us</a>
+      </li>
+    </ul>
   );
 }
 
@@ -39,17 +37,13 @@ function throttle(callback: Function, limit: number) {
   let lastFunc: number;
   let lastRan: number;
 
-  console.log("throttle");
-
   return function () {
     const context = window;
     const args = arguments;
     if (!lastRan) {
-      console.log("throttle if");
       callback.apply(context, args);
       lastRan = Date.now();
     } else {
-      console.log("throttle else");
       clearTimeout(lastFunc);
       lastFunc = window.setTimeout(function () {
         if (Date.now() - lastRan >= limit) {
@@ -62,7 +56,6 @@ function throttle(callback: Function, limit: number) {
 }
 
 function updateActiveLink() {
-  console.log("updateActiveLink");
   const OFFSET = 300;
   const mainNavLinks: NodeList = document.querySelectorAll("nav ul li a");
   const fromTop = window.scrollY;
