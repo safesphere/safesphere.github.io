@@ -117,6 +117,7 @@ export default function Home(props: AppProps) {
             src="/assets/illustration-about.svg"
             alt=""
             style={{ width: "100%", alignSelf: "center" }}
+            className={`${styles.firstColumn}`}
           />
         </section>
 
@@ -235,9 +236,12 @@ export default function Home(props: AppProps) {
           <img
             src="/assets/illustration-security.svg"
             alt=""
-            style={{ width: "400px", alignSelf: "center" }}
+            style={{ width: "100%", maxWidth: "400px", alignSelf: "center" }}
           />
-          <div style={{ alignSelf: "center" }}>
+          <div
+            style={{ alignSelf: "center" }}
+            className={`${styles.firstColumn}`}
+          >
             <header>
               <h2 className="h2">User Privacy</h2>
               <p className="subheading">No quid pro quo</p>
