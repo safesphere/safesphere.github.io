@@ -1,10 +1,24 @@
+import React, { useState, useEffect } from "react";
 import { AppProps } from "next/app";
 
 import Header from "./components/header";
+import Hamburger from "./components/hamburger";
 import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
   const {} = props;
+  const [showVideo, toggleVideo] = useState(false);
+
+  useEffect(() => {
+    function handleEscapeKey(e: KeyboardEvent) {
+      if (showVideo && e.keyCode === 27) {
+        toggleVideo(false);
+      }
+    }
+
+    document.addEventListener("keyup", handleEscapeKey);
+    return () => document.removeEventListener("keyup", handleEscapeKey);
+  });
 
   return (
     <div className="container">
@@ -12,7 +26,7 @@ export default function Home(props: AppProps) {
 
       <main>
         {/**
-         * Intro section
+         * Intro + video section
          */}
         <section className={`${styles.section} ${styles.columns}`}>
           <div>
@@ -44,7 +58,37 @@ export default function Home(props: AppProps) {
               Learn More
             </a>
           </div>
-          <div className={`${styles.firstColumn}`}>Video</div>
+
+          <div className={`${styles.firstColumn}`}>
+            <a
+              href="https://www.youtube.com/watch?v=ZnlSzlIW-X0"
+              className={styles.video}
+              target="_blank"
+              onClick={(e) => playVideo(e)}
+            >
+              <span>Play video</span>
+            </a>
+          </div>
+
+          {showVideo && (
+            <div className={styles.videoPlayer}>
+              <iframe
+                className={styles.embededVideo}
+                src="https://www.youtube-nocookie.com/embed/ZnlSzlIW-X0"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <div className={styles.closeVideo}>
+                <Hamburger
+                  label="Close video"
+                  active={true}
+                  onClick={() => toggleVideo(false)}
+                  color="#ffffff"
+                />
+              </div>
+            </div>
+          )}
         </section>
 
         {/**
@@ -360,4 +404,9 @@ export default function Home(props: AppProps) {
       </footer>
     </div>
   );
+
+  function playVideo(e: React.MouseEvent) {
+    e.preventDefault();
+    toggleVideo(true);
+  }
 }

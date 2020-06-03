@@ -48,6 +48,10 @@
   align-self: center;
   justify-self: flex-end;
   line-height: 0;
+
+  @include breakpoint(md) {
+    display: none;
+  }
 }
 
 .nav {
