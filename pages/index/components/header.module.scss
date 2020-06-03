@@ -18,7 +18,9 @@
     "nav nav";
 
   &[data-menu-show="true"] {
-    background: white;
+    @include breakpoint(md, max) {
+      background: white;
+    }
   }
 
   @include breakpoint(md) {
@@ -52,13 +54,13 @@
   grid-area: nav;
   display: none;
   align-self: center;
-  justify-self: flex-end;
 
   [data-menu-show="true"] & {
     display: block;
   }
 
   @include breakpoint(md) {
+    justify-self: flex-end;
     display: block;
   }
 }
