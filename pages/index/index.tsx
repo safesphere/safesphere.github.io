@@ -16,8 +16,10 @@ export default function Home(props: AppProps) {
          */}
         <section className={`${styles.section} ${styles.columns}`}>
           <div>
-            <h2 className="subheading">
-              Bringing the world closer
+            <h2 className={`subheading ${styles.topTitle}`}>
+              <span style={{ whiteSpace: "nowrap" }}>
+                Bringing the world closer
+              </span>
               <br />
               <span className="accent">but not too close.</span>
             </h2>
@@ -52,7 +54,6 @@ export default function Home(props: AppProps) {
           <div>
             <header>
               <h2 className="h2">About</h2>
-              <br />
               <p className="subheading">What is SafeSphere</p>
             </header>
             <br />
@@ -90,7 +91,6 @@ export default function Home(props: AppProps) {
           <div>
             <header>
               <h2 className="h2">How it works</h2>
-              <br />
               <p className="subheading">A sound solution</p>
             </header>
             <br />
@@ -128,7 +128,6 @@ export default function Home(props: AppProps) {
           <div>
             <header>
               <h2 className="h2">Use cases</h2>
-              <br />
               <p className="subheading">Who would benefit?</p>
             </header>
             <br />
@@ -197,7 +196,6 @@ export default function Home(props: AppProps) {
           <div style={{ alignSelf: "center" }}>
             <header>
               <h2 className="h2">User Privacy</h2>
-              <br />
               <p className="subheading">No quid pro quo</p>
             </header>
             <br />
@@ -223,9 +221,8 @@ export default function Home(props: AppProps) {
             <div>
               <header>
                 <h2 className="h2">SafeSphere’s Founding Team</h2>
-                <br />
                 <p className="subheading">
-                  Where STEM Solves Everyday Challenges{" "}
+                  Where STEM Solves Everyday Challenges
                 </p>
               </header>
             </div>
