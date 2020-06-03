@@ -52,6 +52,7 @@
   grid-area: nav;
   display: none;
   align-self: center;
+  justify-self: flex-end;
 
   [data-menu-show="true"] & {
     display: block;
