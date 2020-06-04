@@ -3,6 +3,10 @@ import { AppProps } from "next/app";
 
 import Header from "./components/header";
 import Hamburger from "./components/hamburger";
+import Team from "./components/team";
+
+import { management, advisors } from "../../data/team";
+
 import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
@@ -295,66 +299,27 @@ export default function Home(props: AppProps) {
             </div>
           </div>
 
-          <section>
-            <h3 className="h2">Management</h3>
-            <ul className={styles.team}>
-              <li>
-                <strong className={styles.teamName}>Elan Blutinger</strong>
-                <span className={styles.teamRole}>Chief Executive Officer</span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Marcel Barbulescu</strong>
-                <span className={styles.teamRole}>
-                  President and Chief Financial Officer
-                </span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Cristian Bursasiu</strong>
-                <span className={styles.teamRole}>Chief Product Officer</span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Daniel Markovits</strong>
-                <span className={styles.teamRole}>
-                  Chief Technology Officer
-                </span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Raluca Popa</strong>
-                <span className={styles.teamRole}>Chief Marketing Officer</span>
-              </li>
-            </ul>
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <section className={styles.teamSection}>
+            <h3 className={`h2 ${styles.teamTitle}`}>Management</h3>
+            <Team members={management} />
           </section>
 
-          <section>
-            <h3 className="h2">Advisors</h3>
-            <ul className={styles.team}>
-              <li>
-                <strong className={styles.teamName}>Erik J Blutinger</strong>
-                <span className={styles.teamRole}>MD</span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Omar Maniya</strong>
-                <span className={styles.teamRole}>MD</span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Jonathan Moreno</strong>
-                <span className={styles.teamRole}>Pd. H</span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>Alexander Sackheim</strong>
-                <span className={styles.teamRole}>MD</span>
-              </li>
-              <li>
-                <strong className={styles.teamName}>TBD</strong>
-                <span className={styles.teamRole}>
-                  Ph.D. Acoustical Engineer
-                </span>
-              </li>
-            </ul>
+          <div className={styles.divider}></div>
+
+          <section className={styles.teamSection}>
+            <h3 className={`h2 ${styles.teamTitle}`}>Advisors</h3>
+            <Team members={advisors} />
           </section>
+
+          <br />
 
           <div className={styles.arrowLink}>
-            <a href="./">
+            <a href="https://www.alpineconsolidated.com/" target="_blank">
               <strong>See our Full Board of Advisors</strong>
             </a>
           </div>
@@ -404,7 +369,12 @@ export default function Home(props: AppProps) {
 
       <footer className={styles.pageFooter}>
         <div>
-          Designed and developed by <strong>[e-spres-oh]</strong>
+          Designed and developed by{" "}
+          <strong>
+            <a href="https://e-spres-oh.com/" target="_blank">
+              [e-spres-oh]
+            </a>
+          </strong>
         </div>
         <div>&copy;Safe Sphere, 2020</div>
       </footer>
