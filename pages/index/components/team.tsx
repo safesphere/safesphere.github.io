@@ -20,6 +20,10 @@ function Team(props: Props) {
     setActive(name === active ? "" : name);
   }
 
+  if (!members) {
+    return null;
+  }
+
   return (
     <ul className={styles.team}>
       {members.map((member) => (
