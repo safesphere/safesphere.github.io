@@ -88,6 +88,10 @@
 }
 
 .teamDescription {
+  p {
+    white-space: pre-wrap;
+  }
+
   @include breakpoint(md, max) {
     display: none;
     font-size: 14px;

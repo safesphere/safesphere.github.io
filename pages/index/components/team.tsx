@@ -75,7 +75,7 @@ function Member(props: MemberProps) {
           <h4>{name}</h4>
           <em>{role}</em>
         </header>
-        {description}
+        <p>{description}</p>
       </section>
     </li>
   );
