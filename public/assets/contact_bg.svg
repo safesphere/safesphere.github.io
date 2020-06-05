@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="888px" height="889px" viewBox="0 0 888 889" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>contact_bg</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.100000001">
+        <g id="SS_V2" transform="translate(150.000000, -4505.000000)" fill="#FFFFFF" stroke="#7A85F5">
+            <g id="Group-9" transform="translate(0.000000, 4686.000000)">
+                <g id="contact_bg" transform="translate(-148.000000, -179.000000)">
+                    <path d="M884,442.500542 C884,686.886556 686.109331,885 442.000541,885 C197.890669,885 0,686.886556 0,442.500542 C0,198.114527 197.890669,0 442.000541,0 C686.109331,0 884,198.114527 884,442.500542 Z" id="Stroke-13" stroke-width="3" fill-opacity="0.8"></path>
+                    <path d="M818,440.000677 C818,648.212522 648.988666,817 440.500678,817 C232.01269,817 63,648.212522 63,440.000677 C63,231.788832 232.01269,63 440.500678,63 C648.988666,63 818,231.788832 818,440.000677 Z" id="Stroke-11" stroke-width="2"></path>
+                    <path d="M670,441.5 C670,567.697098 567.921981,670 442.001025,670 C316.079044,670 214,567.697098 214,441.5 C214,315.302902 316.079044,213 442.001025,213 C567.921981,213 670,315.302902 670,441.5 Z" id="Stroke-3" stroke-width="2" fill-opacity="0.8"></path>
+                    <path d="M549,441 C549,500.094484 501.31882,548 442.500479,548 C383.681659,548 336,500.094484 336,441 C336,381.905516 383.681659,334 442.500479,334 C501.31882,334 549,381.905516 549,441 Z" id="Stroke-3-Copy" stroke-width="2" fill-opacity="0.8"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

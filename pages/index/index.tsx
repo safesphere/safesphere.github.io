@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import Header from "./components/header";
 import Hamburger from "./components/hamburger";
 import Team from "./components/team";
+import Contact from "./components/contact";
 
 import { management, advisors } from "../../data/team";
 
@@ -328,56 +329,50 @@ export default function Home(props: AppProps) {
         {/**
          * Contact us section
          */}
-        <section
-          id="contact-us"
-          className={`${styles.section} ${styles.columns}`}
-        >
-          <div>
-            <header>
-              <h2 className="subheading">SafeSphere your business</h2>
-            </header>
-            <br />
-            <p>
+        <div className={styles.contact}>
+          <section
+            id="contact-us"
+            className={`${styles.section} ${styles.columns}`}
+          >
+            <div>
+              <header>
+                <h2 className="subheading">SafeSphere your business</h2>
+              </header>
+              <br />
+              <p>
+                <strong>
+                  It’s time to rethink how the world works and get back to
+                  business.
+                </strong>
+              </p>
+              <p>
+                SafeSphere will shortly be available to businesses and
+                institutions – sign up now for important updates.
+              </p>
+              <form action="/">
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit" className="button">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+
+            <Contact />
+          </section>
+
+          <footer className={styles.pageFooter}>
+            <div>
+              Designed and developed by{" "}
               <strong>
-                It’s time to rethink how the world works and get back to
-                business.
+                <a href="https://e-spres-oh.com/" target="_blank">
+                  [e-spres-oh]
+                </a>
               </strong>
-            </p>
-            <p>
-              SafeSphere will shortly be available to businesses and
-              institutions – sign up now for important updates.
-            </p>
-            <form action="/">
-              <input type="email" placeholder="Enter your email" />
-              <button type="submit" className="button">
-                Subscribe
-              </button>
-            </form>
-          </div>
-
-          <form action="/">
-            <input type="text" placeholder="name" />
-            <input type="email" placeholder="email" />
-            <input type="tel" placeholder="phone" />
-            <input type="text" placeholder="How can we help?" />
-            <button type="submit" className="button">
-              Contact Us
-            </button>
-          </form>
-        </section>
-      </main>
-
-      <footer className={styles.pageFooter}>
-        <div>
-          Designed and developed by{" "}
-          <strong>
-            <a href="https://e-spres-oh.com/" target="_blank">
-              [e-spres-oh]
-            </a>
-          </strong>
+            </div>
+            <div>&copy;Safe Sphere, 2020</div>
+          </footer>
         </div>
-        <div>&copy;Safe Sphere, 2020</div>
-      </footer>
+      </main>
     </div>
   );
 
