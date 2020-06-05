@@ -37,7 +37,7 @@ export default function Home(props: AppProps) {
           <div>
             <h2 className={`subheading ${styles.topTitle}`}>
               <span style={{ whiteSpace: "nowrap" }}>
-                Bringing the world closer
+                Bringing people closer
               </span>
               <br />
               <span className="accent">but not too close.</span>
@@ -46,21 +46,20 @@ export default function Home(props: AppProps) {
 
             <p>
               SafeSphere's mission is to help institutions and businesses create
-              a safe environment for employees and their customers. Our
-              proprietary technology helps companies protect and empower people
-              in their workplace, by identifying proximity risks with zero data
-              stored.
+              a safe environment for employees and guests. Our proprietary
+              technology helps companies protect and empower people in their
+              workplace, by identifying proximity risks with zero data stored.
             </p>
 
             <p>
               <strong>
-                It's time to give people back their safety and their lives. We
-                help you create a SafeSphere.
+                Maintaining social distancing has never been easier than with
+                SafeSphere.
               </strong>
             </p>
             <br />
             <a href="#about" className="button">
-              Learn More
+              Learn more
             </a>
           </div>
 
@@ -113,8 +112,8 @@ export default function Home(props: AppProps) {
             </p>
             <p>
               <strong>
-                The state-of-the-art technology constantly analyzes proximity
-                data between smartphones.
+                SafeSphere's proprietary technology constantly analyzes
+                proximity data between smartphones.
               </strong>
             </p>
           </div>
@@ -142,19 +141,19 @@ export default function Home(props: AppProps) {
           <div>
             <header>
               <h2 className="h2">How it works</h2>
-              <p className="subheading">A sound solution</p>
+              <p className="subheading">A Sound Solution</p>
             </header>
             <br />
             <ul className="bullet">
               <li>
                 Using precise acoustic signals, SafeSphere’s patent-pending
-                proprietary algorithms determine how close users are to each
-                other, alerting them to keep a safe distance.
+                algorithms determine how close users are to each other, alerting
+                them to keep a safe distance.
               </li>
               <li>
                 The indicator is highly-customizable and works with any mobile
                 app technology to help provide a safe environment. (where we
-                congregate, live, work, shop, travel, play, learn, and worship){" "}
+                congregate, live, work, shop, travel, play, learn, and worship)
               </li>
               <li>
                 Thanks to its unique algorithm, SafeSphere minimizes exposure in
@@ -178,8 +177,8 @@ export default function Home(props: AppProps) {
         >
           <div>
             <header>
-              <h2 className="h2">Use cases</h2>
-              <p className="subheading">Who would benefit?</p>
+              <h2 className="h2">Use Cases</h2>
+              <p className="subheading">Who Would Benefit?</p>
             </header>
             <br />
             <p>
@@ -203,7 +202,7 @@ export default function Home(props: AppProps) {
             </li>
             <li>
               <img src="/assets/icon-sports.svg" alt="" loading="lazy" />
-              Sports arenas and Gyms
+              Sports arenas and gyms
             </li>
             <li>
               <img src="/assets/icon-universities.svg" alt="" loading="lazy" />
@@ -227,7 +226,7 @@ export default function Home(props: AppProps) {
             </li>
             <li>
               <img src="/assets/icon-parks.svg" alt="" loading="lazy" />
-              Public parks
+              Recreational facilities
             </li>
           </ul>
         </section>
@@ -336,7 +335,7 @@ export default function Home(props: AppProps) {
           >
             <div>
               <header>
-                <h2 className="subheading">SafeSphere your business</h2>
+                <h2 className="subheading">SafeSphere Your Business Now</h2>
               </header>
               <br />
               <p>
@@ -346,9 +345,12 @@ export default function Home(props: AppProps) {
                 </strong>
               </p>
               <p>
-                SafeSphere will shortly be available to businesses and
-                institutions – sign up now for important updates.
+                Using SafeSphere, organizations will soon be able to identify
+                social clusters to better manage social distancing in their
+                organizations.
               </p>
+              <p>Sign up now for important updates.</p>
+
               <form action="/">
                 <input type="email" placeholder="Enter your email" />
                 <button type="submit" className="button">
