@@ -70,7 +70,7 @@ export const advisors = [
   },
   {
     name: "Doug Friedman",
-    image: "",
+    image: "doug.png",
     role: "Engineering Program Manager.\nApple Media Products",
     description:
       "Doug has spent the past decade working for Apple and leads Engineering Program Management within Apple's Media Products organization for new audio subscription products. Doug has an extensive background in professional audio, with a Masters in Music Business & Technology from NYU, 15 years of composition & audio engineering experience, and over 25 years of performing on stages around the world. He spends the majority of his days triaging new engineering pipelines & squashing pesky bugs. A native of India, 'Dougie' currently lives in San Francisco & will soon be welcoming a puppy to his home.",
