@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Hamburger from "./components/hamburger";
 import Team from "./components/team";
 import Contact from "./components/contact";
+import Newsletter from "./components/newsletter";
 
 import { management, advisors } from "../../data/team";
 
@@ -351,12 +352,7 @@ export default function Home(props: AppProps) {
               </p>
               <p>Sign up now for important updates.</p>
 
-              <form action="/">
-                <input type="email" placeholder="Enter your email" />
-                <button type="submit" className="button">
-                  Subscribe
-                </button>
-              </form>
+              <Newsletter />
             </div>
 
             <Contact />
