@@ -3,6 +3,12 @@
 .contactForm {
   position: relative;
   background-color: white;
+  padding-top: 50px;
+
+  @include breakpoint(md) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
   input {
     border: 0;

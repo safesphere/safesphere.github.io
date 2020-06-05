@@ -1,7 +1,7 @@
 @import "pages/mixins";
 
 .section {
-  padding: 0 20px;
+  padding: 0 30px;
   padding-top: 100px;
 
   @include breakpoint(md) {
