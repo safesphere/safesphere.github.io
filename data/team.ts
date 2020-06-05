@@ -66,9 +66,10 @@ export const advisors = [
       "Dr. Alexander Sackeim is a practicing emergency medicine physician and entrepreneur. He received his BA and MD from Columbia University and completed his residency at the University of Pennsylvania. During medical school, Alex was a founding member of Curator, a healthcare communications startup, where he led the launch of their first product, helped raise venture funding, and was critical in closing large contracts with top-tier health systems. In residency, Alex conducted several health system-wide quality improvement projects to increase operational efficiency and patient satisfaction. Alex has published on personal health records and healthcare quantitative performance metrics. He was recently accepted to be a fellow in Stanford's Biodesign Innovation Program.",
   },
   {
-    name: "TBD",
+    name: "Doug Friedman",
     image: "",
-    role: "Ph.D. Acoustical Engineer/\n Ultrasound",
-    description: "",
+    role: "Engineering Program Manager.\nApple Media Products",
+    description:
+      "Doug has spent the past decade working for Apple and leads Engineering Program Management within Apple's Media Products organization for new audio subscription products. Doug has an extensive background in professional audio, with a Masters in Music Business & Technology from NYU, 15 years of composition & audio engineering experience, and over 25 years of performing on stages around the world. He spends the majority of his days triaging new engineering pipelines & squashing pesky bugs. A native of India, 'Dougie' currently lives in San Francisco & will soon be welcoming a puppy to his home.",
   },
 ];
