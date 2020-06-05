@@ -88,6 +88,8 @@
 }
 
 .teamDescription {
+  pointer-events: none;
+
   p {
     white-space: pre-wrap;
   }
@@ -147,9 +149,6 @@
 
 .teamContent {
   flex: 1;
-
-  @include breakpoint(md) {
-  }
 }
 
 .teamArrow {
