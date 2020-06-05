@@ -17,7 +17,10 @@ export const management = [
     name: "Cristian Bursasiu",
     image: "manu.png",
     role: "Chief Product \nOfficer",
-    description: ``,
+    description: `Seasoned software professional with solid technical and people leadership experience, Cristian is currently a Product Engineer at [e-spres-oh] working with clients around the world to deliver services and products. Prior to [e-spres-oh], he worked for more than two decades in the software development industry in roles including technical and managerial positions and delivering software solutions for clients in various domains including life science, CAM/CAD, and printing.
+      \nPassionate about programming and algorithms since the high school years, he first approached the software industry from an in-depth technical perspective, later increasing focus on leadership and further delivery responsibilities, as well as more general business/management aspects around software development and delivery. 
+      \nHelping others to solve problems - at different levels and scopes - is what provides meaning and drive in his professional activity. 
+    `,
   },
   {
     name: "Daniel Markovits",
