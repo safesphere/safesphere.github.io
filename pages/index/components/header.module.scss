@@ -12,6 +12,7 @@
   );
   padding: 20px;
   z-index: 10;
+  transition: padding 0.3s;
 
   display: grid;
   grid-template:
@@ -28,6 +29,10 @@
     padding: 50px;
 
     grid-template: "logo toggle nav";
+
+    &[data-menu-scrolled="true"] {
+      padding: 20px;
+    }
   }
 }
 
@@ -40,6 +45,10 @@
 
     @include breakpoint(md) {
       width: auto;
+
+      [data-menu-scrolled="true"] & {
+        width: 160px;
+      }
     }
   }
 }
