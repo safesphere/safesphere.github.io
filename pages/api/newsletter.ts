@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import fetch from "node-fetch";
 import crypto from "crypto";
 
-import { validateEmail } from "./utils";
+import { validateEmail } from "../../utils";
 
 const MAILCHIMP_LIST_ID = "769c3b18ae";
 const MAILCHIMP_API_KEY = "53cf5d2061fa89e573a68c1215ed8bd6-us20";
