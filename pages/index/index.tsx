@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { AppProps } from "next/app";
 
 import Header from "./components/header";
-import Hamburger from "./components/hamburger";
 import Team from "./components/team";
 import Contact from "./components/contact";
 import Newsletter from "./components/newsletter";
+import Video from "./components/video";
 
 import { management, advisors } from "../../data/team";
 
@@ -65,35 +65,8 @@ export default function Home(props: AppProps) {
           </div>
 
           <div className={`${styles.firstColumn}`}>
-            <a
-              href="https://www.youtube.com/watch?v=ZnlSzlIW-X0"
-              className={styles.video}
-              target="_blank"
-              onClick={(e) => playVideo(e)}
-            >
-              <span>Play video</span>
-            </a>
+            <Video youtubeId="ZnlSzlIW-X0" />
           </div>
-
-          {showVideo && (
-            <div className={styles.videoPlayer}>
-              <iframe
-                className={styles.embededVideo}
-                src="https://www.youtube-nocookie.com/embed/ZnlSzlIW-X0"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <div className={styles.closeVideo}>
-                <Hamburger
-                  label="Close video"
-                  active={true}
-                  onClick={() => toggleVideo(false)}
-                  color="#ffffff"
-                />
-              </div>
-            </div>
-          )}
         </section>
 
         {/**
@@ -382,9 +355,4 @@ export default function Home(props: AppProps) {
       </main>
     </div>
   );
-
-  function playVideo(e: React.MouseEvent) {
-    e.preventDefault();
-    toggleVideo(true);
-  }
 }

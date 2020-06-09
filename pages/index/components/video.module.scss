@@ -1,0 +1,80 @@
+@import "pages/mixins";
+
+.video {
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  border: 10px #e9e9e9 solid;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: var(--color-accent);
+  }
+
+  @include breakpoint(md) {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  span {
+    width: 20%;
+    height: 20%;
+    display: block;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: -9999em;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 5vw white solid;
+      border-top: 3vw transparent solid;
+      border-bottom: 3vw transparent solid;
+      border-right: 0;
+      transform: translateX(0.6vw);
+
+      @include breakpoint(md) {
+        border-left: 2vw white solid;
+        border-top: 1.3vw transparent solid;
+        border-bottom: 1.3vw transparent solid;
+        transform: translateX(0.3vw);
+      }
+    }
+  }
+}
+
+.videoPlayer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 1000;
+}
+
+.embededVideo {
+  width: 80%;
+  height: 80%;
+}
+
+.closeVideo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
