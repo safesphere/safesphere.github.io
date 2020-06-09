@@ -18,59 +18,24 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     try {
-      const subscriber_hash = crypto
-        .createHash("md5")
-        .update(email.toLowerCase())
-        .digest("hex");
+      const existing = await getSubscriber(email);
+      console.log({ existing });
 
-      const response = await fetch(
-        `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/${subscriber_hash}`,
-        {
-          headers: {
-            Authorization: `apikey ${MAILCHIMP_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          method: "GET",
+      if (existing.status === 200) {
+        const tag_response = await addTagToSubscriber(email);
+        if (tag_response.status >= 400) {
+          throw `There was an error while adding the tag to your email. Please contact us at contact@safesphere.com`;
         }
-      );
-
-      if (response.status === 200) {
-        return res.status(400).json({
-          error: `This email is already subscribed`,
-        });
-      }
-    } catch (error) {
-      console.error({ error });
-      return res.status(201).json({});
-    }
-
-    try {
-      const data = {
-        email_address: email,
-        status: "subscribed",
-        tags: [MAILCHIMP_TAG],
-      };
-
-      const response = await fetch(
-        `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`,
-        {
-          body: JSON.stringify(data),
-          headers: {
-            Authorization: `apikey ${MAILCHIMP_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          method: "POST",
+      } else {
+        const response = await addSubscriber(email);
+        if (response.status >= 400) {
+          throw `There was an error subscribing to the newsletter. Please contact us at contact@safesphere.com`;
         }
-      );
-
-      if (response.status >= 400) {
-        return res.status(400).json({
-          error: `There was an error subscribing to the newsletter. Please contact us at contact@safesphere.com`,
-        });
       }
 
       return res.status(201).json({ success: true });
     } catch (error) {
+      console.error({ error });
       return res.status(500).json({ error: error.message || error.toString() });
     }
   }
@@ -83,3 +48,66 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     },
   });
 };
+
+function addSubscriber(email: string) {
+  const data = {
+    email_address: email,
+    status: "subscribed",
+    tags: [MAILCHIMP_TAG],
+  };
+
+  return fetch(
+    `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`,
+    {
+      body: JSON.stringify(data),
+      headers: {
+        Authorization: `apikey ${MAILCHIMP_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    }
+  );
+}
+
+function getSubscriber(email: string) {
+  const subscriber_hash = getSubscriberHash(email);
+
+  return fetch(
+    `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/${subscriber_hash}`,
+    {
+      headers: {
+        Authorization: `apikey ${MAILCHIMP_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      method: "GET",
+    }
+  );
+}
+
+function addTagToSubscriber(email: string) {
+  const subscriber_hash = getSubscriberHash(email);
+  const data = {
+    tags: [
+      {
+        name: MAILCHIMP_TAG,
+        status: "active",
+      },
+    ],
+  };
+
+  return fetch(
+    `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/${subscriber_hash}/tags`,
+    {
+      body: JSON.stringify(data),
+      headers: {
+        Authorization: `apikey ${MAILCHIMP_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    }
+  );
+}
+
+function getSubscriberHash(email: string) {
+  return crypto.createHash("md5").update(email.toLowerCase()).digest("hex");
+}
