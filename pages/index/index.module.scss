@@ -145,12 +145,8 @@
   }
 }
 
-.arrowLink {
+.fullBoard {
   text-align: center;
-  background-image: url("/assets/arrow.svg");
-  padding-bottom: 40px;
-  background-repeat: no-repeat;
-  background-position: center bottom;
 
   a {
     color: var(--color-accent);

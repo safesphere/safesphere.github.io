@@ -290,7 +290,7 @@ export default function Home(props: AppProps) {
 
           <br />
 
-          <div className={styles.arrowLink}>
+          <div className={styles.fullBoard}>
             See our full Board of Advisors at{" "}
             <a
               href="https://www.alpineconsolidated.com/#advisors"
