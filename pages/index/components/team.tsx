@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { throttle } from "./utils";
 import styles from "./team.module.scss";
 
 type Member = {
@@ -15,17 +16,31 @@ type Props = {
 function Team(props: Props) {
   const { members } = props;
   const [active, setActive] = useState("");
+  const listRef = useRef() as React.MutableRefObject<HTMLUListElement | null>;
 
-  function toggleActive(name: string) {
-    setActive(name === active ? "" : name);
-  }
+  const toggleScrolledAttibute = useCallback(
+    throttle(
+      () =>
+        listRef.current?.setAttribute(
+          "data-scrolled",
+          String(isElementPassedScreenCenter(listRef.current!))
+        ),
+      500
+    ),
+    [listRef.current]
+  );
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleScrolledAttibute);
+    return () => window.removeEventListener("scroll", toggleScrolledAttibute);
+  });
 
   if (!members) {
     return null;
   }
 
   return (
-    <ul className={styles.team}>
+    <ul className={styles.team} ref={(e) => (listRef.current = e)}>
       {members.map((member) => (
         <Member
           key={member.name}
@@ -36,6 +51,10 @@ function Team(props: Props) {
       ))}
     </ul>
   );
+
+  function toggleActive(name: string) {
+    setActive(name === active ? "" : name);
+  }
 }
 
 type MemberProps = {
@@ -83,6 +102,19 @@ function Member(props: MemberProps) {
       </section>
     </li>
   );
+}
+
+function isElementPassedScreenCenter(elem: HTMLElement) {
+  if (!elem) {
+    return false;
+  }
+
+  const screenH = window.innerHeight || document.documentElement.clientHeight;
+  const rect = elem.getBoundingClientRect();
+  const elemH = rect.height;
+  const elemY = rect.top;
+
+  return elemY + elemH / 2 < screenH / 2;
 }
 
 export default Team;
