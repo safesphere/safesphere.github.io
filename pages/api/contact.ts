@@ -1,6 +1,6 @@
 import sendgrid from "@sendgrid/mail";
 import { NextApiRequest, NextApiResponse } from "next";
-import { validateEmail } from "./utils";
+import { validateEmail } from "../../utils";
 
 const EMAIL_TO = "contact@safesphere.com";
 const SENDGRID_API_KEY =

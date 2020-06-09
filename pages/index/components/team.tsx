@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { throttle } from "./utils";
+import { throttle } from "../../../utils";
 import styles from "./team.module.scss";
 
 type Member = {
