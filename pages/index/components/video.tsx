@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Hamburger from "./hamburger";
 import styles from "./video.module.scss";
 
@@ -9,6 +9,17 @@ type Props = {
 function Video(props: Props) {
   const { youtubeId } = props;
   const [showVideo, toggleVideo] = useState(false);
+
+  useEffect(() => {
+    function handleEscapeKey(e: KeyboardEvent) {
+      if (showVideo && e.keyCode === 27) {
+        toggleVideo(false);
+      }
+    }
+
+    document.addEventListener("keyup", handleEscapeKey);
+    return () => document.removeEventListener("keyup", handleEscapeKey);
+  });
 
   return (
     <>

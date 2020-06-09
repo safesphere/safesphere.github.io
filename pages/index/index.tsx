@@ -13,18 +13,6 @@ import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
   const {} = props;
-  const [showVideo, toggleVideo] = useState(false);
-
-  useEffect(() => {
-    function handleEscapeKey(e: KeyboardEvent) {
-      if (showVideo && e.keyCode === 27) {
-        toggleVideo(false);
-      }
-    }
-
-    document.addEventListener("keyup", handleEscapeKey);
-    return () => document.removeEventListener("keyup", handleEscapeKey);
-  });
 
   return (
     <div className="container">
