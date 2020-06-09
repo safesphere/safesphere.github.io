@@ -38,7 +38,7 @@ export default function Home(props: AppProps) {
           <div>
             <h2 className={`subheading ${styles.topTitle}`}>
               <span style={{ whiteSpace: "nowrap" }}>
-                Bringing people closer
+                Bringing the world closer
               </span>
               <br />
               <span className="accent">but not too close.</span>
@@ -153,8 +153,7 @@ export default function Home(props: AppProps) {
               </li>
               <li>
                 The indicator is highly-customizable and works with any mobile
-                app technology to help provide a safe environment. (where we
-                congregate, live, work, shop, travel, play, learn, and worship)
+                app technology to help provide a safe environment.
               </li>
               <li>
                 Thanks to its unique algorithm, SafeSphere minimizes exposure in
@@ -162,8 +161,8 @@ export default function Home(props: AppProps) {
                 over time.
               </li>
               <li>
-                No other technology can deliver proximity with accuracy for
-                short distances like SafeSphere on mobile devices.
+                No other technology can accurately measure proximity for short
+                distances like SafeSphere on mobile devices.
               </li>
             </ul>
           </div>
@@ -179,7 +178,7 @@ export default function Home(props: AppProps) {
           <div>
             <header>
               <h2 className="h2">Use Cases</h2>
-              <p className="subheading">Who Would Benefit?</p>
+              <p className="subheading">Who Benefits?</p>
             </header>
             <br />
             <p>
@@ -260,7 +259,7 @@ export default function Home(props: AppProps) {
             </p>
             <p>
               <strong>
-                We tackle safety with a 360-approach: No data stored and
+                We tackle safety with a 360&deg; approach: No data stored and
                 complete user privacy. Our priority is employee and customer
                 well-being all around.
               </strong>
@@ -275,7 +274,7 @@ export default function Home(props: AppProps) {
           <div className={styles.columns}>
             <div>
               <header>
-                <h2 className="h2">SafeSphere’s Founding Team</h2>
+                <h2 className="h2">SafeSphere’s Founding team</h2>
                 <p className="subheading">
                   Where STEM Solves Everyday Challenges
                 </p>
@@ -291,11 +290,10 @@ export default function Home(props: AppProps) {
               </p>
               <p>
                 We gathered some real brainpower to create a new, accurate, and
-                inexpensive way to create a safe space for our sphere of
-                interest, on your mobile device. We are a joint venture between
-                Espresoh Tech, a US-based product engineering company, and
-                Alpine Consolidated, investing in first-to-market businesses for
-                more than 25 years.
+                inexpensive way to create a safe space between mobile users. We
+                are a joint venture between Espresoh Tech, a US-based product
+                engineering company, and Alpine Consolidated, investing in
+                first-to-market businesses for more than 25 years.
               </p>
             </div>
           </div>
@@ -320,8 +318,19 @@ export default function Home(props: AppProps) {
           <br />
 
           <div className={styles.arrowLink}>
-            <a href="https://www.alpineconsolidated.com/" target="_blank">
-              <strong>See our Full Board of Advisors</strong>
+            See our full Board of Advisors at{" "}
+            <a
+              href="https://www.alpineconsolidated.com/#advisors"
+              target="_blank"
+            >
+              <strong>Alpine</strong>
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.e-spres-oh.com/people#advisors"
+              target="_blank"
+            >
+              <strong>[e-spres-oh]</strong>
             </a>
           </div>
         </section>
@@ -367,7 +376,7 @@ export default function Home(props: AppProps) {
                 </a>
               </strong>
             </div>
-            <div>&copy;Safe Sphere, 2020</div>
+            <div>&copy;SafeSphere, 2020</div>
           </footer>
         </div>
       </main>

@@ -16,7 +16,7 @@ export const management = [
   {
     name: "Cristian Bursasiu",
     image: "manu.png",
-    role: "Chief Product \nOfficer",
+    role: "Chief Research \nOfficer",
     description: `Seasoned software professional with solid technical and people leadership experience, Cristian is currently a Product Engineer at [e-spres-oh] working with clients around the world to deliver services and products. Prior to [e-spres-oh], he worked for more than two decades in the software development industry in roles including technical and managerial positions and delivering software solutions for clients in various domains including life science, CAM/CAD, and printing.
       \nPassionate about programming and algorithms since the high school years, he first approached the software industry from an in-depth technical perspective, later increasing focus on leadership and further delivery responsibilities, as well as more general business/management aspects around software development and delivery. 
       \nHelping others to solve problems - at different levels and scopes - is what provides meaning and drive in his professional activity. 
@@ -25,20 +25,27 @@ export const management = [
   {
     name: "Daniel Markovits",
     image: "dani.png",
-    role: "Chief Technology \nOfficer",
+    role: "Chief Product \nOfficer",
     description: `With 12+ years of experience in the software business and digital environment, Dani is currently the Director of Engineering at [e-spres-oh], handling the company’s international portfolio and running the engineering office in Western Europe. Prior to [e-spres-oh], he was a well-established Product Owner and Business Analyst, demonstrating his prowess in the tech industry by transforming challenging projects into successful products. 
-      \nDaniel’s interest in efficient management and effective processes is doubled by his interpersonal skills, making him an approachable and proficient team leader. His vision is to leverage the latest technologies in order to empower [e-spres-oh]’s team to set challenging objectives and grow. He strives to advance more than the success of the company, but also its culture, maintaining [espres-oh]’s unique work environment and enriching it with novel solutions.`,
+    \nDaniel’s interest in efficient management and effective processes is doubled by his interpersonal skills, making him an approachable and proficient team leader. His vision is to leverage the latest technologies in order to empower [e-spres-oh]’s team to set challenging objectives and grow. He strives to advance more than the success of the company, but also its culture, maintaining [espres-oh]’s unique work environment and enriching it with novel solutions.`,
   },
   {
     name: "Raluca Popa",
     image: "raluca.png",
     role: "Chief Marketing \nOfficer",
     description: `Raluca has spent the better part of her professional life in journalism and technology, working with leading technology players in the US and Europe. She currently serves as Director of Client Services at [e-spres-oh] providing strategic marketing expertise and project planning. Prior to [e-spres-oh], Raluca served as the Chief Operating Officer of the Institute for Education, a DC-based mission-driven organization, harnessing the power of data, innovation and soft diplomacy. 
-      \nRaluca is the founder of a publication focused on the intersection of education, innovation and diplomacy. In her role as the Editor-in-Chief of IFE magazine, she has interviewed ambassadors, Nobel Prize winners and key tech innovators and disruptors in the nation’s capital. Previously, Raluca served as a Washington DC news correspondent, reporting for an international press agency headquartered in Bucharest, Romania. Raluca has an M.A. degree in Management in Media Institutions from University of Bucharest and speaks English, Spanish and Romanian.`,
+    \nRaluca is the founder of a publication focused on the intersection of education, innovation and diplomacy. In her role as the Editor-in-Chief of IFE magazine, she has interviewed ambassadors, Nobel Prize winners and key tech innovators and disruptors in the nation’s capital. Previously, Raluca served as a Washington DC news correspondent, reporting for an international press agency headquartered in Bucharest, Romania. Raluca has an M.A. degree in Management in Media Institutions from University of Bucharest and speaks English, Spanish and Romanian.`,
   },
 ];
 
 export const advisors = [
+  {
+    name: "Doug Friedman",
+    image: "doug.png",
+    role: "Senior Engineering \nManager",
+    description:
+      "Doug has spent the past decade working for Apple and leads Engineering Program Management within Apple's Media Products organization for new audio subscription products. Doug has an extensive background in professional audio, with a Masters in Music Business & Technology from NYU, 15 years of composition & audio engineering experience, and over 25 years of performing on stages around the world. He spends the majority of his days triaging new engineering pipelines & squashing pesky bugs. A native of India, 'Dougie' currently lives in San Francisco & will soon be welcoming a puppy to his home.",
+  },
   {
     name: "Erik J Blutinger",
     image: "erik.png",
@@ -56,7 +63,7 @@ export const advisors = [
   {
     name: "Jonathan Moreno",
     image: "jonathan.png",
-    role: "Pd. H",
+    role: "Ph. D.",
     description: `Called “the quietly most interesting bioethicist of our time” by the American Journal of Bioethics, Jonathan is the David and Lyn Silfen University Professor at the University of Pennsylvania where he is a Penn Integrates Knowledge (PIK) professor. He is an elected member of the National Academy of Medicine where he chairs the Interest Group on Human Rights, Professionalism, and the Values of Medicine and served two-term as the U.S. member of the UNESCO International Bioethics Committee. He has advised many governmental and non-governmental organizations, including three presidential commissions, the Department of Defense, the Department of Homeland Security, the Department of Health and Human Services, the Centers for Disease Control, the Federal Bureau of Investigation, the Howard Hughes Medical Institute, and the Bill and Melinda Gates Foundation.
       \nJonathan received his Ph.D. in philosophy from Washington University in St. Louis, was an Andrew W. Mellon post-doctoral fellow, holds an honorary doctorate from Hofstra University and is a recipient of the College of William and Mary Law School Benjamin Rush Medal, the Dr. Jean Mayer Award for Global Citizenship from Tufts University, and the Penn Alumni Faculty Award of Merit. He holds the honorary Visiting Professorship in History at the University of Kent in Canterbury, England.
       \nIn 2018 the American Society for Bioethics and Humanities presented him with its Lifetime Achievement Award.`,
@@ -67,12 +74,5 @@ export const advisors = [
     role: "MD",
     description:
       "Dr. Alexander Sackeim is a practicing emergency medicine physician and entrepreneur. He received his BA and MD from Columbia University and completed his residency at the University of Pennsylvania. During medical school, Alex was a founding member of Curator, a healthcare communications startup, where he led the launch of their first product, helped raise venture funding, and was critical in closing large contracts with top-tier health systems. In residency, Alex conducted several health system-wide quality improvement projects to increase operational efficiency and patient satisfaction. Alex has published on personal health records and healthcare quantitative performance metrics. He was recently accepted to be a fellow in Stanford's Biodesign Innovation Program.",
-  },
-  {
-    name: "Doug Friedman",
-    image: "doug.png",
-    role: "Engineering Program Manager.\nApple Media Products",
-    description:
-      "Doug has spent the past decade working for Apple and leads Engineering Program Management within Apple's Media Products organization for new audio subscription products. Doug has an extensive background in professional audio, with a Masters in Music Business & Technology from NYU, 15 years of composition & audio engineering experience, and over 25 years of performing on stages around the world. He spends the majority of his days triaging new engineering pipelines & squashing pesky bugs. A native of India, 'Dougie' currently lives in San Francisco & will soon be welcoming a puppy to his home.",
   },
 ];

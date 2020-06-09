@@ -220,19 +220,18 @@
 
 .arrowLink {
   text-align: center;
+  background-image: url("/assets/arrow.svg");
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 
   a {
     color: var(--color-accent);
     text-decoration: none;
-    background-image: url("/assets/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
     display: inline-block;
-    padding-bottom: 40px;
-    transition: all 0.3s;
 
     &:hover {
-      background-position: 60% bottom;
+      color: var(--color-dark);
     }
   }
 }
