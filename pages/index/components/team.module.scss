@@ -88,8 +88,19 @@
   display: inline-block;
   margin-top: 0.5em;
 
+  @include breakpoint(md, max) {
+    // make only the third span break
+    & span + span + span {
+      display: block;
+    }
+  }
+
   @include breakpoint(md) {
-    white-space: pre-wrap;
+    & span {
+      display: block;
+      height: 1.4em;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -122,7 +133,7 @@
       z-index: 100;
       left: 0;
       right: 0;
-      bottom: 240px;
+      bottom: 255px;
 
       background-color: var(--color-dark);
       color: white;
@@ -134,7 +145,7 @@
   .team[data-scrolled="true"] li:hover & {
     @include breakpoint(md) {
       bottom: auto;
-      top: calc(160px);
+      top: 157px;
     }
   }
 
@@ -171,6 +182,7 @@
   background-color: var(--color-accent);
   text-indent: -9999em;
   border-radius: 50%;
+  margin-left: 2em;
 
   @include breakpoint(md) {
     display: none;

@@ -69,6 +69,9 @@ function Member(props: MemberProps) {
 
   const show = name === active;
 
+  let _role = role.split("\n").join("</span><span>");
+  _role = `<span>${_role}</span>`;
+
   return (
     <li data-active={show}>
       <div className={styles.teamMain} onClick={setActive}>
@@ -87,7 +90,10 @@ function Member(props: MemberProps) {
 
         <div className={styles.teamContent}>
           <strong className={styles.teamName}>{name}</strong>
-          <span className={styles.teamRole}>{role}</span>
+          <span
+            className={styles.teamRole}
+            dangerouslySetInnerHTML={{ __html: _role }}
+          ></span>
         </div>
 
         <span className={styles.teamArrow}>Toggle</span>
