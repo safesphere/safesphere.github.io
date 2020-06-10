@@ -40,7 +40,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="http://www.safesphere.com/safesphere-og.png"
+            content="http://www.safesphere.com/safesphere-og-new.png"
           />
           <meta property="og:image:width" content="2000" />
           <meta property="og:image:height" content="1000" />
