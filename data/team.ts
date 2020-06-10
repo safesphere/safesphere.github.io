@@ -56,7 +56,7 @@ export const advisors = [
   {
     name: "Omar Maniya",
     image: "omar.png",
-    role: "MD, MBA \nThe Mt. Sinai Hospital NYC \nFormer EMRA President & AMA",
+    role: "MD, MBA \nThe Mt. Sinai Hospital NYC \nFormer EMRA President",
     description: `Omar is passionate about re-imagining acute care delivery and making medicine fun again. He has worked with a variety of health care startups, consulted for health systems at McKinsey & Company, and published an economic model of a new value-based payment program.  He served as EMRA President (2018-9), was the youngest member of the AMA’s Board of Trustees (2016-7) and currently serves on the Board of Directors of the Emergency Medicine Foundation (EMF) and the ED Practice Management Association (EDPMA), as well as on ACEP’s Future of Emergency Medicine Taskforce and his Hospital Medical Executive Board.
       \nOmar has been featured on CNN & Fox News, is a MedTech 40 under 40 Healthcare Innovator, a McKinsey Emerging Scholar, and an AMA Foundation Leadership Award recipient. He earned a BS/MD from Georgetown University and an MBA from Harvard Business School, with further training at ED Directors Academy and is currently a senior emergency medicine resident physician at The Mount Sinai Hospital in NYC.`,
   },
