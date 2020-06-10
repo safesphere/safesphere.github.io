@@ -28,11 +28,20 @@ class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&amp;display=swap"
             rel="stylesheet"
           ></link>
+          <meta
+            property="og:title"
+            content="Maintaining social distancing has never been easier than with
+                SafeSphere"
+          />
+          <meta
+            property="og:image"
+            content="http://www.safesphere.com/safesphere-og.png"
+          />
+          B
         </Head>
         <body>
           <Main />
