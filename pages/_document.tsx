@@ -32,8 +32,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&amp;display=swap"
             rel="stylesheet"
           ></link>
+          <meta property="og:title" content="SafeSphere" />
           <meta
-            property="og:title"
+            property="og:description"
             content="Maintaining social distancing has never been easier than with
                 SafeSphere"
           />
@@ -41,7 +42,9 @@ class MyDocument extends Document {
             property="og:image"
             content="http://www.safesphere.com/safesphere-og.png"
           />
-          B
+          <meta property="og:image:width" content="2000" />
+          <meta property="og:image:height" content="1000" />
+          <meta property="og:type" content="website" />
         </Head>
         <body>
           <Main />
