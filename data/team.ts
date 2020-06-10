@@ -9,7 +9,7 @@ export const management = [
   {
     name: "Marcel Barbulescu",
     image: "marcel.png",
-    role: "President and \nChief Financial Officer \n ",
+    role: "President",
     description: `Marcel, a leading and recognized technologist in the field of AI and software engineering and telecommunications, is the Chief Strategy Officer at Alpine Consolidated. Formerly, he served as the President & COO of AudioNow Holdings from 2008 to it’s successful sale in 2017 with responsibility for finance, technology, and operations. 
       \nMarcel lead global technical operations and product strategy for AudioNow and multiple early stage ventures. He founded Ziggo Technologies, specializing in bespoke telecom applications, and currently serves on its board. He is the recipient of multiple awards internationally and from US defense agencies including the US Army War College, and Air War College for his publications and lectures on the use of AI (artificial intelligence) and learning agents for security, and military applications. Marcel is a graduate of George Mason (M.Sc. in Computer Science, and Ph.D. ABD) and the Polytechnica University in Romania.`,
   },
