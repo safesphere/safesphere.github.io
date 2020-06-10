@@ -25,7 +25,7 @@ function Navigation() {
         <a href="#user-privacy">User privacy</a>
       </li>
       <li>
-        <a href="#founding-team">Founding Team</a>
+        <a href="#founding-team">Founding team</a>
       </li>
       <li>
         <a href="#contact-us">Contact us</a>
