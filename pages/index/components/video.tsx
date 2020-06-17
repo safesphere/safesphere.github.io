@@ -17,9 +17,13 @@ function Video(props: Props) {
       }
     }
 
+    if (window.location.hash === "#video") {
+      toggleVideo(true);
+    }
+
     document.addEventListener("keyup", handleEscapeKey);
     return () => document.removeEventListener("keyup", handleEscapeKey);
-  });
+  }, []);
 
   return (
     <>
