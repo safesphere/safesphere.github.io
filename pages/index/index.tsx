@@ -53,7 +53,7 @@ export default function Home(props: AppProps) {
           </div>
 
           <div className={`${styles.firstColumn}`}>
-            <Video youtubeId="ZnlSzlIW-X0" />
+            <Video youtubeId="SDyfgN3qfOs" />
           </div>
         </section>
 

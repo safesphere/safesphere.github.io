@@ -10,7 +10,6 @@ function Video(props: Props) {
   const { youtubeId } = props;
   const [showVideo, toggleVideo] = useState(false);
 
-  /*
   useEffect(() => {
     function handleEscapeKey(e: KeyboardEvent) {
       if (showVideo && e.keyCode === 27) {
@@ -21,9 +20,6 @@ function Video(props: Props) {
     document.addEventListener("keyup", handleEscapeKey);
     return () => document.removeEventListener("keyup", handleEscapeKey);
   });
-  */
-
-  return null;
 
   return (
     <>
