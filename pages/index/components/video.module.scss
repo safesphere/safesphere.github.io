@@ -67,11 +67,12 @@
   justify-content: center;
   background-color: black;
   z-index: 1000;
-}
 
-.embededVideo {
-  width: 80%;
-  height: 80%;
+  text-align: center;
+  color: white;
+  a {
+    color: var(--color-accent);
+  }
 }
 
 .closeVideo {

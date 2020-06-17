@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import Hamburger from "./hamburger";
 import styles from "./video.module.scss";
 
-type Props = {
-  youtubeId: string;
-};
-
-function Video(props: Props) {
-  const { youtubeId } = props;
+function Video() {
   const [showVideo, toggleVideo] = useState(false);
+  const videoUrl = "/assets/video/safesphere-video.mp4";
+  const captionUrl = "/assets/video/safesphere-video-en.vtt";
+
+  useEffect(() => {
+    if (window.location.hash === "#video") {
+      toggleVideo(true);
+    }
+  }, []);
 
   useEffect(() => {
     function handleEscapeKey(e: KeyboardEvent) {
@@ -17,18 +20,14 @@ function Video(props: Props) {
       }
     }
 
-    if (window.location.hash === "#video") {
-      toggleVideo(true);
-    }
-
     document.addEventListener("keyup", handleEscapeKey);
     return () => document.removeEventListener("keyup", handleEscapeKey);
-  }, []);
+  });
 
   return (
     <>
       <a
-        href={`https://www.youtube.com/watch?v=${youtubeId}`}
+        href={videoUrl}
         className={styles.video}
         target="_blank"
         onClick={(e) => playVideo(e)}
@@ -38,13 +37,32 @@ function Video(props: Props) {
 
       {showVideo && (
         <div className={styles.videoPlayer}>
-          <iframe
-            className={styles.embededVideo}
-            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <video
+            src={videoUrl}
+            preload="auto"
+            autoPlay={true}
+            controls={true}
+            width="90%"
+            height="90%"
+          >
+            {captionUrl && (
+              <track
+                label="English"
+                kind="subtitles"
+                srcLang="en"
+                src={captionUrl}
+                default={true}
+              />
+            )}
+            <p>
+              Your browser doesn't support HTML5 video. <br />
+              Here is a{" "}
+              <a href={videoUrl} target="_blank">
+                link to the video
+              </a>{" "}
+              instead.
+            </p>
+          </video>{" "}
           <div className={styles.closeVideo}>
             <Hamburger
               label="Close video"
