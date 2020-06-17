@@ -98,7 +98,6 @@ export default function Home(props: AppProps) {
             src="/assets/illustration-solution.svg"
             alt=""
             style={{ width: "100%", alignSelf: "center" }}
-            loading="lazy"
           />
           <div>
             <header>
@@ -158,35 +157,35 @@ export default function Home(props: AppProps) {
           </div>
           <ul className={styles.useCases}>
             <li>
-              <img src="/assets/icon-supermarkets.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-supermarkets.svg" alt="" />
               Supermarkets and retail spaces
             </li>
             <li>
-              <img src="/assets/icon-sports.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-sports.svg" alt="" />
               Sports arenas and gyms
             </li>
             <li>
-              <img src="/assets/icon-universities.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-universities.svg" alt="" />
               Universities
             </li>
             <li>
-              <img src="/assets/icon-restaurants.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-restaurants.svg" alt="" />
               Restaurants
             </li>
             <li>
-              <img src="/assets/icon-office.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-office.svg" alt="" />
               Office buildings and factories
             </li>
             <li>
-              <img src="/assets/icon-hospitals.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-hospitals.svg" alt="" />
               Healthcare institutions
             </li>
             <li>
-              <img src="/assets/icon-airports.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-airports.svg" alt="" />
               Airports and train stations
             </li>
             <li>
-              <img src="/assets/icon-parks.svg" alt="" loading="lazy" />
+              <img src="/assets/icon-parks.svg" alt="" />
               Recreational facilities
             </li>
           </ul>
@@ -203,7 +202,6 @@ export default function Home(props: AppProps) {
             src="/assets/illustration-security.svg"
             alt=""
             style={{ width: "100%", maxWidth: "400px", alignSelf: "center" }}
-            loading="lazy"
           />
           <div
             style={{ alignSelf: "center" }}
