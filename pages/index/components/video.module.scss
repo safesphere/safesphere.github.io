@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     text-indent: -9999em;
+    font-size: 0;
 
     &::after {
       content: "";
