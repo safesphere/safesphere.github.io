@@ -36,7 +36,7 @@ function Video(props: Props) {
         <div className={styles.videoPlayer}>
           <iframe
             className={styles.embededVideo}
-            src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
+            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?&autoplay=1`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
