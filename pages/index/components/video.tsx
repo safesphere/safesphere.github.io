@@ -43,7 +43,6 @@ function Video() {
             autoPlay={true}
             controls={true}
             width="90%"
-            height="90%"
           >
             {captionUrl && (
               <track
