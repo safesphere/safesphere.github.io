@@ -262,16 +262,16 @@ export default function Home(props: AppProps) {
           <br />
           <br />
 
-          <section className={styles.teamSection}>
+          <section>
             <h3 className={`h2 ${styles.teamTitle}`}>Management</h3>
             <Team members={management} />
           </section>
 
           <div className={styles.divider}></div>
 
-          <section className={styles.teamSection}>
+          <section>
             <h3 className={`h2 ${styles.teamTitle}`}>Advisors</h3>
-            <Team members={advisors} />
+            <Team members={advisors} incomplete={true} />
           </section>
 
           <br />

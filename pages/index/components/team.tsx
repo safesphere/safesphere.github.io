@@ -11,12 +11,14 @@ type Member = {
 
 type Props = {
   members: Member[];
+  incomplete?: boolean;
 };
 
 function Team(props: Props) {
-  const { members } = props;
+  const { members, incomplete } = props;
   const [active, setActive] = useState("");
   const listRef = useRef() as React.MutableRefObject<HTMLUListElement | null>;
+  const style = `${styles.team} ${incomplete ? styles.teamIncomplete : ""}`;
 
   const toggleScrolledAttibute = useCallback(
     throttle(
@@ -40,7 +42,7 @@ function Team(props: Props) {
   }
 
   return (
-    <ul className={styles.team} ref={(e) => (listRef.current = e)}>
+    <ul className={style} ref={(e) => (listRef.current = e)}>
       {members.map((member) => (
         <Member
           key={member.name}

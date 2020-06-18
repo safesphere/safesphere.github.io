@@ -76,4 +76,12 @@ export const advisors = [
     description:
       "Dr. Alexander Sackeim is a practicing emergency medicine physician and entrepreneur. He received his BA and MD from Columbia University and completed his residency at the University of Pennsylvania. During medical school, Alex was a founding member of Curator, a healthcare communications startup, where he led the launch of their first product, helped raise venture funding, and was critical in closing large contracts with top-tier health systems. In residency, Alex conducted several health system-wide quality improvement projects to increase operational efficiency and patient satisfaction. Alex has published on personal health records and healthcare quantitative performance metrics. He was recently accepted to be a fellow in Stanford's Biodesign Innovation Program.",
   },
+  {
+    name: "Alan Faden",
+    image: "alan.png",
+    role:
+      "Professor and Center Director \nUniversity of Maryland \nSchool of Medicine",
+    description: `Dr. Faden is a neurologist who is an internationally recognized leader in neurotrauma. As the former director of the Center for Shock, Trauma and Anesthesiology Research (STAR), Dr. Faden oversaw multidisciplinary research focusing on brain injuries, critical care, and organ support, resuscitation, surgical outcomes, patient safety, and injury prevention. He currently serves as the Scientific Co-Director for the newly established bi-campus Center for Sports Medicine Health and Human Performance, as well as Associate Dean for Trans-Campus Research Advancement.
+      \nHis present research focuses on the pathobiology and treatment of traumatic brain and spinal cord injuries, mechanisms of cell death, neuroinflammation, central pain, and drug discovery.`,
+  },
 ];

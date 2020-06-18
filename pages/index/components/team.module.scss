@@ -8,9 +8,17 @@
   flex: 1;
 
   @include breakpoint(md) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
     align-items: flex-start;
+
+    &.teamIncomplete {
+      grid-template-columns: repeat(4, 1fr);
+      li:nth-child(5) {
+        grid-column-start: 2;
+      }
+    }
   }
 
   li {

@@ -53,26 +53,6 @@
 .teamTitle {
   font-size: 24px;
   opacity: 0.6;
-  @include breakpoint(md) {
-  }
-}
-
-.teamSection {
-  @include breakpoint(md) {
-    display: flex;
-    justify-content: stretch;
-    position: relative;
-    width: 100%;
-    padding-left: 50px;
-
-    .teamTitle {
-      position: absolute;
-      top: 0;
-      right: 100%;
-      transform: translateY(100%) rotate(-90deg);
-      transform-origin: top right;
-    }
-  }
 }
 
 .pageFooter {
