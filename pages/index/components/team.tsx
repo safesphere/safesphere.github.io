@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import { throttle } from "../../../utils";
+import { management, advisors } from "../../../data/team";
 import styles from "./team.module.scss";
 
 type Member = {
@@ -9,53 +10,84 @@ type Member = {
   description: string;
 };
 
-type Props = {
-  members: Member[];
-  incomplete?: boolean;
-};
-
-function Team(props: Props) {
-  const { members, incomplete } = props;
+function Team() {
   const [active, setActive] = useState("");
-  const listRef = useRef() as React.MutableRefObject<HTMLUListElement | null>;
-  const style = `${styles.team} ${incomplete ? styles.teamIncomplete : ""}`;
 
-  const toggleScrolledAttibute = useCallback(
-    throttle(
-      () =>
-        listRef.current?.setAttribute(
-          "data-scrolled",
-          String(isElementPassedScreenCenter(listRef.current!))
-        ),
-      500
-    ),
-    [listRef.current]
+  const refs = management
+    .concat(advisors)
+    .reduce((acc: any, member: Member) => {
+      acc[
+        member.name
+      ] = React.createRef() as React.MutableRefObject<HTMLElement | null>;
+      return acc;
+    }, {});
+
+  const toggleScrolledAttribute = useCallback(
+    throttle(() => active && updateActivePopup(refs[active].current!), 300),
+    [active]
   );
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleScrolledAttibute);
-    return () => window.removeEventListener("scroll", toggleScrolledAttibute);
+    window.addEventListener("scroll", toggleScrolledAttribute);
+    window.addEventListener("click", hidePopup);
+
+    return () => {
+      window.removeEventListener("scroll", toggleScrolledAttribute);
+      window.removeEventListener("click", hidePopup);
+    };
   });
 
-  if (!members) {
-    return null;
-  }
-
   return (
-    <ul className={style} ref={(e) => (listRef.current = e)}>
-      {members.map((member) => (
-        <Member
-          key={member.name}
-          member={member}
-          active={active}
-          setActive={() => toggleActive(member.name)}
-        />
-      ))}
-    </ul>
+    <>
+      <section>
+        <h3 className={`h2 ${styles.teamTitle}`}>Management</h3>
+        <ul className={`${styles.team}`}>
+          {management.map((member) => (
+            <Member
+              ref={refs[member.name]}
+              key={member.name}
+              member={member}
+              active={active}
+              setActive={() => toggleActive(member.name)}
+            />
+          ))}
+        </ul>
+      </section>
+
+      <div className={styles.divider}></div>
+
+      <section>
+        <h3 className={`h2 ${styles.teamTitle}`}>Advisors</h3>
+        <ul className={`${styles.team} ${styles.teamIncomplete}`}>
+          {advisors.map((member) => (
+            <Member
+              ref={refs[member.name]}
+              key={member.name}
+              member={member}
+              active={active}
+              setActive={() => toggleActive(member.name)}
+            />
+          ))}
+        </ul>
+      </section>
+    </>
   );
 
   function toggleActive(name: string) {
     setActive(name === active ? "" : name);
+    const ref = refs[name].current;
+    setTimeout(() => updateActivePopup(ref), 0);
+  }
+
+  function hidePopup() {
+    if (!active) {
+      return;
+    }
+
+    const ref: HTMLElement = refs[active].current;
+    const popup = getPopup(ref);
+    popup.setAttribute("data-show", "false");
+    setActive("");
   }
 }
 
@@ -65,7 +97,7 @@ type MemberProps = {
   setActive(): void;
 };
 
-function Member(props: MemberProps) {
+const Member = React.forwardRef((props: MemberProps, ref: any) => {
   const { member, active, setActive } = props;
   const { name, image, role, description } = member;
 
@@ -75,8 +107,14 @@ function Member(props: MemberProps) {
   _role = `<span>${_role}</span>`;
 
   return (
-    <li data-active={show}>
-      <div className={styles.teamMain} onClick={setActive}>
+    <li data-active={show} ref={ref}>
+      <div
+        className={styles.teamMain}
+        onClick={(e) => {
+          e.stopPropagation();
+          setActive();
+        }}
+      >
         {image ? (
           <img
             src={`/assets/team/${image}`}
@@ -101,7 +139,11 @@ function Member(props: MemberProps) {
         <span className={styles.teamArrow}>Toggle</span>
       </div>
 
-      <section className={styles.teamDescription} data-show={show}>
+      <section
+        className={styles.teamDescription}
+        data-show="false"
+        onClick={(e) => e.stopPropagation()}
+      >
         <header>
           <h4>{name}</h4>
           <em>{role}</em>
@@ -110,19 +152,40 @@ function Member(props: MemberProps) {
       </section>
     </li>
   );
-}
+});
 
-function isElementPassedScreenCenter(elem: HTMLElement) {
+function updateActivePopup(elem: HTMLElement) {
   if (!elem) {
     return false;
   }
 
   const screenH = window.innerHeight || document.documentElement.clientHeight;
-  const rect = elem.getBoundingClientRect();
-  const elemH = rect.height;
-  const elemY = rect.top;
+  const rectImage = elem.querySelector("img")!.getBoundingClientRect();
 
-  return elemY + elemH / 2 < screenH / 2;
+  const elemH = rectImage.height;
+  const elemY = rectImage.top;
+
+  const isElementPassedScreenCenter = elemY + elemH / 2 < screenH / 2;
+
+  const popup = getPopup(elem);
+  const ul = elem.closest("ul") as HTMLElement;
+  const rectPopup = popup.getBoundingClientRect();
+  const rectUl = ul.getBoundingClientRect();
+  const elementOffsetToUl = elemY - rectUl.top;
+
+  popup.setAttribute("data-show", "true");
+
+  if (isElementPassedScreenCenter) {
+    elem.setAttribute("data-scrolled", "true");
+    popup.style.top = `${elementOffsetToUl + elemH + 15}px`;
+  } else {
+    elem.setAttribute("data-scrolled", "false");
+    popup.style.top = `${elementOffsetToUl - rectPopup.height - 15}px`;
+  }
+}
+
+function getPopup(elem: HTMLElement) {
+  return elem.querySelector("[data-show]") as HTMLElement;
 }
 
 export default Team;

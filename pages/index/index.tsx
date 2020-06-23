@@ -7,8 +7,6 @@ import Contact from "./components/contact";
 import Newsletter from "./components/newsletter";
 import Video from "./components/video";
 
-import { management, advisors } from "../../data/team";
-
 import styles from "./index.module.scss";
 
 export default function Home(props: AppProps) {
@@ -262,17 +260,7 @@ export default function Home(props: AppProps) {
           <br />
           <br />
 
-          <section>
-            <h3 className={`h2 ${styles.teamTitle}`}>Management</h3>
-            <Team members={management} />
-          </section>
-
-          <div className={styles.divider}></div>
-
-          <section>
-            <h3 className={`h2 ${styles.teamTitle}`}>Advisors</h3>
-            <Team members={advisors} incomplete={true} />
-          </section>
+          <Team />
 
           <br />
 
