@@ -79,9 +79,8 @@ export const advisors = [
   {
     name: "Alan Faden",
     image: "alan.png",
-    role:
-      "Professor and Center Director \nUniversity of Maryland \nSchool of Medicine",
-    description: `Dr. Faden is a neurologist who is an internationally recognized leader in neurotrauma. As the former director of the Center for Shock, Trauma and Anesthesiology Research (STAR), Dr. Faden oversaw multidisciplinary research focusing on brain injuries, critical care, and organ support, resuscitation, surgical outcomes, patient safety, and injury prevention. He currently serves as the Scientific Co-Director for the newly established bi-campus Center for Sports Medicine Health and Human Performance, as well as Associate Dean for Trans-Campus Research Advancement.
+    role: "Professor \nUniversity of Maryland \nSchool of Medicine",
+    description: `Dr. Faden is a neurologist who is an internationally recognized leader in neurotrauma. As the former director of the Center for Shock, Trauma and Anesthesiology Research (STAR), Dr. Faden oversaw multidisciplinary research focusing on brain injuries, critical care, and organ support, resuscitation, surgical outcomes, patient safety, and injury prevention. He currently serves as the Scientific Co-Director for the established bi-campus Center for Sports Medicine Health and Human Performance. Dr. Faden also served as President of the Neurotrauma Society, San Francisco Neurological Society, and American Society for Experimental NeuroTherapeutics (ASENT), as well as Center and Institute Director at multiple institutions.
       \nHis present research focuses on the pathobiology and treatment of traumatic brain and spinal cord injuries, mechanisms of cell death, neuroinflammation, central pain, and drug discovery.`,
   },
 ];
