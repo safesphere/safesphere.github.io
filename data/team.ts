@@ -3,15 +3,13 @@ export const management = [
     name: "Elan Blutinger",
     image: "elan.png",
     role: "Chief Executive \nOfficer \n ",
-    description: `Elan has been Managing Director of Alpine Consolidated, a Washington based venture investment company, since its founding in 1996. He led the successful launch, IPO, and sale of multiple public travel and technology companies in the US and the UK, and subsequently served as a Director at Hotels.com, chairing the Special Committee and overseeing the sale of the company to IAC/Inter-ActiveCorp. 
-      \nElan is a founding Director of Great Wolf Resorts, Mountain Reservations and former Chairman & CEO of AudioNow Holdings from 2008 until its successful sale in 2017. He has chaired the boards of non-profit institutions including the Hirondelle Foundation, the Washington International School, and OurTime.Org. He speaks five languages and holds graduate and law degrees from the University of California at Berkeley and American University.`,
+    description: `Elan Blutinger is the CEO and co-founder of SafeSphere, the inventors of proprietary technology that analyzes proximity data between smartphones using ultrasound and leads business and commercial development. Elan founded and lead multiple first-to-market technology-based ventures all with successful exits to shareholders. He is the founder of Alpine Consolidated, a Washington DC venture fund since 1996. His prior experience allows him to identify new market opportunities, recruit outstanding teams and generate positive returns for shareholders.`,
   },
   {
     name: "Marcel Barbulescu",
     image: "marcel.png",
-    role: "President",
-    description: `Marcel, a leading and recognized technologist in the field of AI and software engineering and telecommunications, is the Chief Strategy Officer at Alpine Consolidated. Formerly, he served as the President & COO of AudioNow Holdings from 2008 to it’s successful sale in 2017 with responsibility for finance, technology, and operations. 
-      \nMarcel lead global technical operations and product strategy for AudioNow and multiple early stage ventures. He founded Ziggo Technologies, specializing in bespoke telecom applications, and currently serves on its board. He is the recipient of multiple awards internationally and from US defense agencies including the US Army War College, and Air War College for his publications and lectures on the use of AI (artificial intelligence) and learning agents for security, and military applications. Marcel is a graduate of George Mason (M.Sc. in Computer Science, and Ph.D. ABD) and the Polytechnica University in Romania.`,
+    role: "President & \nChief Technology \nOfficer \n ",
+    description: `Marcel Barbulescu is the CTO and co-founder of SafeSphere. He leads product strategy and technology management. He has held multiple executive positions in prior technology ventures as CTO and President/COO. He is the current President and CFO of Espresoh Tech, LLC, a US based software engineering company. His passion is building experienced teams to deliver technology-based solutions to optimize complex business and social problems. Marcel is a recognized technologist in the field of AI, software engineering, and telecommunications. He is the recipient of multiple awards on the use of Artificial Intelligence (AI) and learning agents for security and military applications. Marcel has a M.Sc. in Computer Science from George Mason University.`,
   },
   {
     name: "Daniel Markovits",
@@ -24,16 +22,15 @@ export const management = [
     name: "Cristian Bursasiu",
     image: "manu.png",
     role: "Chief Research \nOfficer \n ",
-    description: `Seasoned software professional with solid technical and people leadership experience, Cristian is currently a Product Engineer at [e-spres-oh] working with clients around the world to deliver services and products. Prior to [e-spres-oh], he worked for more than two decades in the software development industry in roles including technical and managerial positions and delivering software solutions for clients in various domains including life science, CAM/CAD, and printing.
+    description: `Seasoned software professional with solid technical and people leadership experience, Cristian is currently a Senior Product Engineer at [e-spres-oh] working with clients around the world to deliver services and products. Prior to [e-spres-oh], he worked for more than two decades in the software development industry in roles including technical and managerial positions and delivering software solutions for clients in various domains including life science, CAM/CAD, and printing.
       \nPassionate about programming and algorithms since the high school years, he first approached the software industry from an in-depth technical perspective, later increasing focus on leadership and further delivery responsibilities, as well as more general business/management aspects around software development and delivery. 
-      \nHelping others to solve problems - at different levels and scopes - is what provides meaning and drive in his professional activity. 
-    `,
+      \nHelping others to solve problems - at different levels and scopes - is what provides meaning and drive in his professional activity.`,
   },
   {
     name: "Raluca Popa",
     image: "raluca.png",
     role: "Chief Marketing \nOfficer \n ",
-    description: `Raluca has spent the better part of her professional life in journalism and technology, working with leading technology players in the US and Europe. She currently serves as Director of Client Services at [e-spres-oh] providing strategic marketing expertise and project planning. Prior to [e-spres-oh], Raluca served as the Chief Operating Officer of the Institute for Education, a DC-based mission-driven organization, harnessing the power of data, innovation and soft diplomacy. 
+    description: `Raluca has spent the better part of her professional life in journalism and technology, working with leading technology players in the US and Europe. She currently serves as Director of Client Services at [e-spres-oh] providing strategic marketing expertise and project planning. Prior to [e-spres-oh], Raluca served as the Chief Operating Officer of the Institute for Education, a Washington DC-based mission-driven organization, harnessing the power of data, innovation and soft diplomacy. 
     \nRaluca is the founder of a publication focused on the intersection of education, innovation and diplomacy. In her role as the Editor-in-Chief of IFE magazine, she has interviewed ambassadors, Nobel Prize winners and key tech innovators and disruptors in the nation’s capital. Previously, Raluca served as a Washington DC news correspondent, reporting for an international press agency headquartered in Bucharest, Romania. Raluca has an M.A. degree in Management in Media Institutions from University of Bucharest and speaks English, Spanish and Romanian.`,
   },
 ];
