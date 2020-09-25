@@ -41,7 +41,7 @@ function Team() {
     <>
       <section>
         <h3 className={`h2 ${styles.teamTitle}`}>Management</h3>
-        <ul className={`${styles.team}`}>
+        <ul className={`${styles.team} ${styles.teamIncomplete}`}>
           {management.map((member) => (
             <Member
               ref={refs[member.name]}

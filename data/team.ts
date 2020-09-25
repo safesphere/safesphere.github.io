@@ -19,6 +19,13 @@ export const management = [
     \nDaniel’s interest in efficient management and effective processes is doubled by his interpersonal skills, making him an approachable and proficient team leader. His vision is to leverage the latest technologies in order to empower [e-spres-oh]’s team to set challenging objectives and grow. He strives to advance more than the success of the company, but also its culture, maintaining [espres-oh]’s unique work environment and enriching it with novel solutions.`,
   },
   {
+    name: "Dr. Roxana Leontie",
+    image: "roxana.png",
+    role: "Chief Scientist",
+    description: `Roxana is currently a professor of Computer Science at George Washington University and is conducting her Postdoc. She has published numerous articles on emulating biomechanical actions in nature through novel software-hardware combinations.
+      \nHer goal is to advise and lead research efforts on developing improved accuracy on mobile hardware from SafeSphere’s software-based platform. She holds a M.S., in Computer Science and Ph.D., in Robotics from George Washington University. She will be involved weekly in all activities related to software-driven hardware development and commercial Phase I activities.`,
+  },
+  {
     name: "Cristian Bursasiu",
     image: "manu.png",
     role: "Chief Research \nOfficer \n ",
