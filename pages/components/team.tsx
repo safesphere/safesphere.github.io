@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { throttle } from "../../../utils";
-import { management, advisors } from "../../../data/team";
+import { throttle } from "../../utils";
+import { management, advisors } from "../../data/team";
 import styles from "./team.module.scss";
 
 type Member = {
