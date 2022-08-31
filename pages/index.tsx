@@ -4,7 +4,6 @@ import { AppProps } from "next/app";
 import Header from "./components/header";
 import Team from "./components/team";
 import Contact from "./components/contact";
-import Newsletter from "./components/newsletter";
 import Video from "./components/video";
 
 import styles from "./index.module.scss";
@@ -306,9 +305,6 @@ export default function Home(props: AppProps) {
                 social clusters to better manage social distancing in their
                 organizations.
               </p>
-              <p>Sign up now for important updates.</p>
-
-              <Newsletter />
             </div>
 
             <Contact />
