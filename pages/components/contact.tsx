@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "./contact.module.scss";
 
 function Contact() {
@@ -13,13 +14,12 @@ function Contact() {
 
   return (
     <form
-      method="POST"
-      action="/api/contact"
       onSubmit={sendEmail}
       className={styles.contactForm}
     >
       <input
         type="text"
+        name="name"
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
@@ -30,6 +30,7 @@ function Contact() {
 
       <input
         type="email"
+        name="email"
         placeholder="E-mail address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -40,6 +41,7 @@ function Contact() {
 
       <input
         type="tel"
+        name="phone"
         placeholder="Phone no."
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
@@ -48,6 +50,7 @@ function Contact() {
 
       <input
         type="text"
+        name="message"
         placeholder="How can we help?"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -73,29 +76,23 @@ function Contact() {
     </form>
   );
 
-  async function sendEmail(e: React.FormEvent) {
+  async function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     setLoading(true);
     setErrors([]);
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, phone, message }),
-    });
-    const data = await response.json();
 
-    if (data.success === true) {
-      setSuccess(true);
-      setName("");
-      setEmail("");
-      setPhone("");
-      setMessage("");
-    } else if (data.errors) {
-      setErrors(data.errors);
-    } else {
-      alert("Email couldn't be sent");
-    }
+    emailjs.sendForm("service_aux9q8h", "contactform", e.currentTarget, "7JhZZoK59ZPor12pY")
+      .then((result) => {
+        setSuccess(true);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      }, (error) => {
+        setErrors(error.text);
+      });
+
     setLoading(false);
   }
 }
