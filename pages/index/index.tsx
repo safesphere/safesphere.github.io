@@ -323,7 +323,7 @@ export default function Home(props: AppProps) {
                 </a>
               </strong>
             </div>
-            <div>&copy;SafeSphere, 2020</div>
+            <div>&copy; SafeSphere {`${new Date().getFullYear()}`}</div>
           </footer>
         </div>
       </main>
