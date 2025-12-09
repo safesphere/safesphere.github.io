@@ -1,4 +1,4 @@
-@import "pages/mixins";
+@use "mixins.scss" as *;
 
 html {
   background-color: var(--color-bg);

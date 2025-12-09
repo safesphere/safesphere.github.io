@@ -1,4 +1,4 @@
-@import "pages/mixins";
+@use "../mixins.scss" as *;
 
 .teamTitle {
   font-size: 24px;

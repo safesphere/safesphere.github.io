@@ -1,4 +1,4 @@
-@import "pages/mixins";
+@use "../mixins.scss" as *;
 
 $hamburger-layer-width: 32px !default;
 $hamburger-layer-height: 2px !default;
