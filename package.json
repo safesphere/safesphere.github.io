@@ -13,7 +13,7 @@
     "next": "^16.1.1",
     "react": "^19.2.1",
     "react-dom": "^19.2.3",
-    "sass": "^1.97.1"
+    "sass": "^1.97.2"
   },
   "devDependencies": {
     "@types/node": "^25.0.3",
